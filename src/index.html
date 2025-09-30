@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Momen Kita - Undangan Digital Elegan</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'serif': ['Playfair Display', 'serif'],
+                        'sans': ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+    <style>
+        /* Menambahkan anti-aliasing untuk font yang lebih halus */
+        body {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+    </style>
+</head>
+
+<body class="bg-white font-sans">
+
+    <header x-data="{ open: false }" class="bg-white/80 backdrop-blur-md shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <a href="#" class="text-2xl font-serif font-bold text-indigo-600">
+                    Momen Kita
+                </a>
+
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#fitur" class="text-slate-600 hover:text-indigo-600 transition duration-300">Fitur</a>
+                    <a href="#desain" class="text-slate-600 hover:text-indigo-600 transition duration-300">Desain</a>
+                    <a href="#harga" class="text-slate-600 hover:text-indigo-600 transition duration-300">Harga</a>
+                    <a href="#kontak" class="text-slate-600 hover:text-indigo-600 transition duration-300">Kontak</a>
+                </nav>
+
+                <a href="#harga" class="hidden md:block bg-indigo-600 text-white px-5 py-2 rounded-full hover:bg-indigo-700 transition duration-300">
+                    Pilih Paket
+                </a>
+
+                <button @click="open = !open" class="md:hidden focus:outline-none">
+                    <svg class="w-6 h-6 text-slate-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m4 6h-16"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <div x-show="open" @click.away="open = false" class="md:hidden mt-4">
+                <nav class="flex flex-col space-y-4">
+                    <a href="#fitur" class="text-slate-600 hover:text-indigo-600">Fitur</a>
+                    <a href="#desain" class="text-slate-600 hover:text-indigo-600">Desain</a>
+                    <a href="#harga" class="text-slate-600 hover:text-indigo-600">Harga</a>
+                    <a href="#kontak" class="text-slate-600 hover:text-indigo-600">Kontak</a>
+                    <a href="#harga" class="bg-indigo-600 text-white text-center px-5 py-2 rounded-full hover:bg-indigo-700">
+                        Pilih Paket
+                    </a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="relative h-[70vh] md:h-[90vh] flex items-center justify-center text-center text-white">
+            <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://images.pexels.com/photos/169198/pexels-photo-169198.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');"></div>
+            <div class="absolute inset-0 bg-black opacity-60"></div>
+            
+            <div class="relative z-10 px-6">
+                <h1 class="text-4xl md:text-6xl font-serif font-bold leading-tight mb-4">Sebarkan Kabar Bahagia dengan Gaya</h1>
+                <p class="text-lg md:text-xl mb-8 max-w-2xl mx-auto">Buat dan bagikan undangan digital yang elegan dan interaktif untuk momen paling berharga dalam hidup Anda.</p>
+                <a href="#desain" class="bg-indigo-600 text-white px-8 py-3 rounded-full text-lg font-semibold hover:bg-indigo-700 transition duration-300">
+                    Lihat Pilihan Desain
+                </a>
+            </div>
+        </section>
+
+        <section id="cara-kerja" class="py-20 bg-slate-50">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl md:text-4xl font-serif font-bold text-slate-800 mb-4">Hanya 3 Langkah Mudah</h2>
+                <p class="text-slate-600 mb-12 max-w-2xl mx-auto">Proses cepat dan simpel untuk membuat undangan impian Anda.</p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                    <div class="flex flex-col items-center">
+                        <div class="bg-indigo-100 text-indigo-600 rounded-full w-20 h-20 flex items-center justify-center text-3xl font-bold mb-4">1</div>
+                        <h3 class="text-xl font-semibold text-slate-800 mb-2">Pilih Desain Favorit</h3>
+                        <p class="text-slate-600">Pilih dari puluhan template premium yang telah kami siapkan untuk berbagai tema acara.</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <div class="bg-indigo-100 text-indigo-600 rounded-full w-20 h-20 flex items-center justify-center text-3xl font-bold mb-4">2</div>
+                        <h3 class="text-xl font-semibold text-slate-800 mb-2">Lengkapi Detail Acara</h3>
+                        <p class="text-slate-600">Isi informasi lengkap mengenai nama mempelai, waktu, lokasi, dan cerita cinta Anda.</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <div class="bg-indigo-100 text-indigo-600 rounded-full w-20 h-20 flex items-center justify-center text-3xl font-bold mb-4">3</div>
+                        <h3 class="text-xl font-semibold text-slate-800 mb-2">Bagikan & Sebarkan</h3>
+                        <p class="text-slate-600">Undangan digital Anda siap dibagikan ke seluruh tamu melalui media sosial atau aplikasi chat.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="fitur" class="py-20">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-serif font-bold text-slate-800">Fitur Unggulan Kami</h2>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-white p-6 rounded-lg border border-slate-200">
+                        <h3 class="text-lg font-semibold text-indigo-600 mb-2">Manajemen RSVP Online</h3>
+                        <p class="text-slate-600">Tamu dapat mengonfirmasi kehadiran langsung, memudahkan Anda dalam pendataan.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg border border-slate-200">
+                        <h3 class="text-lg font-semibold text-indigo-600 mb-2">Galeri Foto & Video Pre-wedding</h3>
+                        <p class="text-slate-600">Bagikan momen-momen indah Anda dalam sebuah galeri yang elegan.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg border border-slate-200">
+                        <h3 class="text-lg font-semibold text-indigo-600 mb-2">Navigasi Peta Lokasi</h3>
+                        <p class="text-slate-600">Integrasi Google Maps untuk memudahkan tamu menemukan lokasi acara.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg border border-slate-200">
+                        <h3 class="text-lg font-semibold text-indigo-600 mb-2">Amplop Digital (Angpao)</h3>
+                        <p class="text-slate-600">Fasilitas bagi tamu untuk mengirimkan hadiah secara digital dengan mudah dan aman.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg border border-slate-200">
+                        <h3 class="text-lg font-semibold text-indigo-600 mb-2">Cerita Cinta & Pasangan</h3>
+                        <p class="text-slate-600">Ruang khusus untuk menceritakan perjalanan kisah cinta Anda kepada para tamu.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg border border-slate-200">
+                        <h3 class="text-lg font-semibold text-indigo-600 mb-2">Musik Latar Pilihan</h3>
+                        <p class="text-slate-600">Pilih lagu favorit Anda untuk mengiringi tamu saat membuka undangan.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="desain" class="py-20 bg-slate-50">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl md:text-4xl font-serif font-bold text-slate-800 mb-12">Desain Premium untuk Setiap Tema</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 items-start">
+                    
+                    <img src="images/undangan-1.jpg" alt="Desain undangan digital Ajeng & Teddy" class="w-full h-auto object-cover rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300">
+                    
+                    <img src="images/undangan-2.webp" alt="Desain undangan pernikahan Alex & Olivia" class="w-full h-auto object-cover rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300">
+                    
+                    <img src="images/undangan-3.webp" alt="Desain undangan pernikahan Juliana & Muhammad" class="w-full h-auto object-cover rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300">
+                
+                </div>
+            </div>
+        </section>
+
+        <section id="harga" class="py-20">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl md:text-4xl font-serif font-bold text-slate-800 mb-12">Paket Harga Fleksibel</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                    <div class="border border-slate-200 rounded-lg p-8">
+                        <h3 class="text-xl font-bold text-indigo-600 mb-2">Bronze</h3>
+                        <p class="text-4xl font-bold text-slate-800 mb-4">Rp 100k</p>
+                        <ul class="text-slate-600 space-y-2 mb-8">
+                            <li>5 Fitur Dasar</li>
+                            <li>Pilihan 10 Template</li>
+                            <li>Masa Aktif 6 Bulan</li>
+                        </ul>
+                        <a href="#" class="w-full block bg-slate-200 text-slate-800 px-6 py-3 rounded-full hover:bg-slate-300 transition duration-300">Pilih Paket</a>
+                    </div>
+                    <div class="border-2 border-indigo-600 rounded-lg p-8 relative transform md:scale-105 shadow-xl">
+                        <span class="absolute top-0 -translate-y-1/2 bg-indigo-600 text-white text-sm font-semibold px-4 py-1 rounded-full">Paling Populer</span>
+                        <h3 class="text-xl font-bold text-indigo-600 mb-2">Silver</h3>
+                        <p class="text-4xl font-bold text-slate-800 mb-4">Rp 150k</p>
+                        <ul class="text-slate-600 space-y-2 mb-8">
+                            <li>10 Fitur Unggulan</li>
+                            <li>Pilihan 30 Template</li>
+                            <li>Amplop Digital</li>
+                            <li>Masa Aktif 1 Tahun</li>
+                        </ul>
+                        <a href="#" class="w-full block bg-indigo-600 text-white px-6 py-3 rounded-full hover:bg-indigo-700 transition duration-300">Pilih Paket</a>
+                    </div>
+                    <div class="border border-slate-200 rounded-lg p-8">
+                        <h3 class="text-xl font-bold text-indigo-600 mb-2">Gold</h3>
+                        <p class="text-4xl font-bold text-slate-800 mb-4">Rp 250k</p>
+                        <ul class="text-slate-600 space-y-2 mb-8">
+                            <li>Semua Fitur Premium</li>
+                            <li>Request Desain Custom</li>
+                            <li>Tanpa Batas Waktu</li>
+                        </ul>
+                        <a href="#" class="w-full block bg-slate-200 text-slate-800 px-6 py-3 rounded-full hover:bg-slate-300 transition duration-300">Pilih Paket</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="testimoni" class="py-20 bg-slate-50">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl md:text-4xl font-serif font-bold text-slate-800 mb-12">Apa Kata Klien Kami?</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto text-left">
+                    <div class="bg-white p-8 rounded-lg shadow-md">
+                        <p class="text-slate-600 mb-6 italic">"Prosesnya cepat dan hasilnya memuaskan! Para tamu memuji undangannya yang keren dan modern. Fitur RSVP sangat membantu kami."</p>
+                        <p class="font-bold text-slate-800">- Rian & Dita</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-lg shadow-md">
+                        <p class="text-slate-600 mb-6 italic">"Tim Momen Kita sangat responsif dan membantu. Desainnya elegan persis seperti yang kami mau. Terima kasih banyak!"</p>
+                        <p class="font-bold text-slate-800">- Sarah & Adit</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="kontak" class="py-20 bg-indigo-700 text-white">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl md:text-4xl font-serif font-bold mb-4">Wujudkan Undangan Impian Anda</h2>
+                <p class="mb-8 max-w-2xl mx-auto">Masih punya pertanyaan atau siap untuk memulai? Hubungi kami sekarang!</p>
+                <a href="https://wa.me/62811456999" target="_blank" class="bg-white text-indigo-700 px-10 py-4 rounded-full text-lg font-bold hover:bg-slate-100 transition duration-300">
+                    Hubungi via WhatsApp
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-slate-800 text-white py-6">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2025 Momen Kita. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
